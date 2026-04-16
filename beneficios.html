@@ -3,14 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beneficios del Entrenamiento | Silvia Body System</title>
+  <title>Beneficios | Silvia Body System</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* HERO INTERNO MÁS VISUAL */
+    .hero-beneficios {
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      background: linear-gradient(135deg, #000, #1a1a1a);
+    }
+
+    .hero-beneficios::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.25;
+    }
+
+    .hero-beneficios .content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero-beneficios h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero-beneficios p {
+      font-size: 18px;
+      color: #dcdcdc;
+    }
+
+    /* TARJETAS MEJORADAS */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 80px 10%;
+    }
+
+    .benefit-card {
+      background: linear-gradient(145deg, #111, #1a1a1a);
+      border-radius: 18px;
+      padding: 30px;
+      transition: 0.4s;
+      border: 1px solid rgba(255,255,255,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    }
+
+    .benefit-card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .benefit-card ul {
+      margin: 15px 0;
+      padding-left: 15px;
+    }
+
+    .benefit-card li {
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #cfcfcf;
+    }
+
+    .emotion {
+      margin-top: 15px;
+      font-style: italic;
+      color: #ff9a1f;
+      font-size: 14px;
+    }
+
+    /* CIERRE */
+    .cta-final {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .cta-final h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+  </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <header class="nav">
   <h1>Silvia Body System</h1>
   <nav>
@@ -23,67 +120,83 @@
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
+<!-- HERO DINÁMICO -->
+<section class="hero-beneficios">
+  <div class="content">
     <h2>Beneficios del Entrenamiento</h2>
-    <p>Transforma tu cuerpo, tu salud y tu vida desde dentro</p>
+    <p>No es solo verte mejor. Es sentirte imparable.</p>
   </div>
 </section>
 
 <!-- BENEFICIOS -->
-<section class="grid">
+<section class="benefits-grid">
 
-  <!-- FUERZA -->
-  <div class="card">
-    <h3>💪 Fuerza y desarrollo muscular</h3>
-    <p>Mejora la fuerza general del cuerpo y aumenta tu resistencia física.</p>
-    <p>Ayuda a prevenir lesiones y mejora la postura corporal.</p>
+  <div class="benefit-card">
+    <h3>💪 Fuerza y cuerpo</h3>
+    <ul>
+      <li>Más fuerza en tu día a día</li>
+      <li>Mejor postura</li>
+      <li>Prevención de lesiones</li>
+      <li>Mayor resistencia</li>
+    </ul>
+    <p class="emotion">Tu cuerpo deja de ser un límite y se convierte en una herramienta.</p>
   </div>
 
-  <!-- CARDIO -->
-  <div class="card">
+  <div class="benefit-card">
     <h3>❤️ Salud cardiovascular</h3>
-    <p>Mejora la frecuencia cardíaca y fortalece tu corazón.</p>
-    <p>Aumenta tu energía diaria y favorece la circulación.</p>
+    <ul>
+      <li>Mejora del corazón</li>
+      <li>Más energía diaria</li>
+      <li>Mejor circulación</li>
+      <li>Menos fatiga</li>
+    </ul>
+    <p class="emotion">Te cansas menos. Vives más.</p>
   </div>
 
-  <!-- ÓSEO -->
-  <div class="card">
-    <h3>🦴 Salud ósea y estructura</h3>
-    <p>Fortalece la estructura ósea y mejora la estabilidad corporal.</p>
-    <p>Ayuda a prevenir problemas articulares y pérdida de densidad.</p>
+  <div class="benefit-card">
+    <h3>🦴 Huesos y estructura</h3>
+    <ul>
+      <li>Refuerzo óseo</li>
+      <li>Prevención del deterioro</li>
+      <li>Mejor estabilidad</li>
+      <li>Menos riesgo de lesiones</li>
+    </ul>
+    <p class="emotion">Inviertes hoy en tu calidad de vida del futuro.</p>
   </div>
 
-  <!-- CORE -->
-  <div class="card">
+  <div class="benefit-card">
     <h3>🧠 Core y movilidad</h3>
-    <p>Refuerza el abdomen y la zona lumbar.</p>
-    <p>Mejora tu movilidad y te hace más ágil en el día a día.</p>
+    <ul>
+      <li>Abdomen fuerte</li>
+      <li>Mayor equilibrio</li>
+      <li>Movimientos más ágiles</li>
+      <li>Más independencia</li>
+    </ul>
+    <p class="emotion">Te mueves mejor. Vives mejor.</p>
   </div>
 
-  <!-- BIENESTAR -->
-  <div class="card">
-    <h3>🥗 Bienestar y salud mental</h3>
-    <p>Reduce el estrés y mejora la calidad del sueño.</p>
-    <p>Aumenta la concentración y mejora tu relación con el cuerpo.</p>
+  <div class="benefit-card">
+    <h3>🥗 Bienestar y mente</h3>
+    <ul>
+      <li>Mejor descanso</li>
+      <li>Menos estrés</li>
+      <li>Más concentración</li>
+      <li>Relación sana con tu cuerpo</li>
+    </ul>
+    <p class="emotion">No solo transformas tu cuerpo. Transformas tu mente.</p>
   </div>
 
 </section>
 
-<!-- BLOQUE MOTIVACIONAL -->
-<section class="hero">
-  <div>
-    <h2>El entrenamiento no es solo estética</h2>
-    <p>Es salud, autonomía y calidad de vida.</p>
+<!-- CIERRE -->
+<section class="cta-final">
+  <h2>Entrenar no es solo cambiar tu cuerpo. Es cambiar tu vida.</h2>
 
-    <a href="hipertrofia.html" class="btn">
-      Empieza tu cambio
-    </a>
-  </div>
+  <a href="hipertrofia.html" class="btn">
+    Empieza tu transformación
+  </a>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2026 Silvia Body System</p>
 </footer>
