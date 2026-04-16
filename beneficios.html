@@ -16,6 +16,83 @@
       color: white;
     }
 
+    /* ================= NAVBAR PREMIUM ================= */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 15px 5%;
+      
+      background: rgba(10,10,10,0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: 0.3s ease;
+    }
+
+    .nav:hover {
+      background: rgba(10,10,10,0.85);
+    }
+
+    .nav h1 {
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: white;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .nav nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav nav a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 10px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    .nav nav a:hover {
+      color: white;
+      background: rgba(255,154,31,0.15);
+      transform: translateY(-2px);
+    }
+
+    .nav nav a::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      width: 0%;
+      height: 2px;
+      background: #ff9a1f;
+      transition: 0.3s;
+      transform: translateX(-50%);
+    }
+
+    .nav nav a:hover::after {
+      width: 60%;
+    }
+
+    /* ================= ESPACIO POR NAV FIJA ================= */
+    body {
+      padding-top: 80px;
+    }
+
     /* ================= HERO ================= */
     .hero-beneficios {
       height: 70vh;
@@ -61,7 +138,6 @@
 
     .hero-beneficios p {
       font-size: 18px;
-      color: #ffffff;
       opacity: 0.85;
     }
 
@@ -73,7 +149,7 @@
       padding: 90px 10%;
     }
 
-    /* ================= CARDS PREMIUM ================= */
+    /* ================= CARDS ================= */
     .benefit-card {
       background: rgba(255,255,255,0.05);
       backdrop-filter: blur(10px);
@@ -81,18 +157,8 @@
       border-radius: 20px;
       padding: 30px;
       transition: 0.4s ease;
-      position: relative;
       overflow: hidden;
-      color: white; /* 🔥 TODO TEXTO BLANCO */
-    }
-
-    .benefit-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(255,154,31,0.15), transparent 60%);
-      opacity: 0;
-      transition: 0.4s;
+      color: white;
     }
 
     .benefit-card:hover {
@@ -101,24 +167,16 @@
       border: 1px solid rgba(255,154,31,0.3);
     }
 
-    .benefit-card:hover::before {
-      opacity: 1;
-    }
-
     .benefit-card h3 {
       font-size: 22px;
       margin-bottom: 15px;
       color: white;
     }
 
-    .benefit-card ul {
-      padding-left: 18px;
-    }
-
     .benefit-card li {
       margin-bottom: 8px;
       font-size: 14px;
-      color: white; /* 🔥 IMPORTANTE */
+      color: white;
       opacity: 0.85;
     }
 
@@ -176,6 +234,7 @@
 
 <header class="nav">
   <h1>Silvia Body System</h1>
+
   <nav>
     <a href="index.html">Inicio</a>
     <a href="beneficios.html">Beneficios</a>
