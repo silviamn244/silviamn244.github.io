@@ -2,51 +2,169 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Silvia Body System</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* =========================
+       HERO PREMIUM STYLE (HOME)
+    ========================= */
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: white;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Fondo imagen realista */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("https://images.unsplash.com/photo-1599058917765-a780eda07a3e");
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35);
+      transform: scale(1.05);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 900px;
+      padding: 20px;
+      z-index: 2;
+    }
+
+    .brand {
+      font-size: 60px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 300;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    .quote {
+      font-size: 20px;
+      font-style: italic;
+      color: #dcdcdc;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: linear-gradient(45deg, #ff3b3b, #ff9a1f);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 80, 0, 0.6);
+    }
+
+    /* NAV SIMPLE PREMIUM */
+    .nav {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      z-index: 3;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      opacity: 1;
+      color: #ff9a1f;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .brand {
+        font-size: 38px;
+      }
+
+      .quote {
+        font-size: 16px;
+      }
+
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="nav">
-  <h1>Silvia Body System</h1>
-  <nav>
-    <a href="index.html">Inicio</a>
+<!-- NAV -->
+<div class="nav">
+  <div><strong>Silvia Body System</strong></div>
+  <div>
     <a href="beneficios.html">Beneficios</a>
     <a href="hipertrofia.html">Hipertrofia</a>
     <a href="hibrido.html">Híbrido</a>
     <a href="movilidad.html">Movilidad</a>
-    <a href="cardio-abdomen.html">Cardio + Abs</a>
-  </nav>
-</header>
+    <a href="cardio-abdomen.html">Cardio</a>
+  </div>
+</div>
 
+<!-- HERO -->
 <section class="hero">
-  <h2>Transforma tu cuerpo. Mejora tu vida.</h2>
-  <p>Silvia Body System es un sistema de entrenamiento diseñado para todos los niveles: fuerza, salud, rendimiento y estética.</p>
-  <a class="btn" href="beneficios.html">Empezar</a>
+
+  <div class="hero-content">
+
+    <div class="brand">Silvia Body System</div>
+
+    <div class="name">Silvia Martínez Fernández</div>
+
+    <div class="quote">
+      “Transforma tu cuerpo. Transforma tu vida.”
+    </div>
+
+    <a class="btn" href="beneficios.html">
+      Empieza tu transformación
+    </a>
+
+  </div>
+
 </section>
 
-<section class="grid">
-  <div class="card">
-    <h3>Fuerza</h3>
-    <p>Desarrollo muscular inteligente</p>
-  </div>
-
-  <div class="card">
-    <h3>Salud</h3>
-    <p>Entrena sin lesionarte</p>
-  </div>
-
-  <div class="card">
-    <h3>Rendimiento</h3>
-    <p>Más energía en tu día a día</p>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Silvia Body System</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
