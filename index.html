@@ -1,114 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silvia Body System</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silvia Body System</title>
 
-        header {
-            background-color: #000;
-            text-align: center;
-            padding: 15px 10px;
-            font-size: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-bottom: 1px solid #222;
-        }
+  <link rel="stylesheet" href="style.css">
 
-        header span {
-            margin: 0 10px;
-            color: #c9a646; /* dorado suave */
-        }
+  <style>
 
-        .hero {
-            height: 100vh;
-            background: url('tu-imagen.jpg') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-        }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: white;
+    }
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.55);
-        }
+    /* ================= NAVBAR PREMIUM (MISMO ESTILO) ================= */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            padding: 20px;
-        }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-        h1 {
-            font-size: 48px;
-            margin: 0;
-            font-weight: 800;
-            letter-spacing: 2px;
-        }
+      padding: 15px 5%;
 
-        h2 {
-            font-size: 20px;
-            font-weight: 300;
-            margin: 10px 0 20px 0;
-            color: #ccc;
-        }
+      background: rgba(10,10,10,0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
 
-        .frase {
-            font-size: 18px;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: 0.3s ease;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #c9a646;
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: 0.3s;
-        }
+    .nav:hover {
+      background: rgba(10,10,10,0.85);
+    }
 
-        .btn:hover {
-            background-color: #e0b84f;
-        }
-    </style>
+    .nav strong {
+      font-size: 16px;
+      letter-spacing: 1px;
+      color: white;
+    }
+
+    .nav div:last-child {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 10px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    .nav a:hover {
+      color: white;
+      background: rgba(255,154,31,0.15);
+      transform: translateY(-2px);
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      width: 0%;
+      height: 2px;
+      background: #ff9a1f;
+      transition: 0.3s;
+      transform: translateX(-50%);
+    }
+
+    .nav a:hover::after {
+      width: 60%;
+    }
+
+    /* ESPACIO POR NAV FIJA */
+    body {
+      padding-top: 80px;
+    }
+
+    /* ================= HERO PREMIUM STYLE ================= */
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("https://images.unsplash.com/photo-1599058917765-a780eda07a3e");
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35);
+      transform: scale(1.05);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 900px;
+      padding: 20px;
+      z-index: 2;
+    }
+
+    .brand {
+      font-size: 60px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 300;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    .quote {
+      font-size: 20px;
+      font-style: italic;
+      color: #dcdcdc;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: linear-gradient(45deg, #ff3b3b, #ff9a1f);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 80, 0, 0.6);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .brand {
+        font-size: 38px;
+      }
+
+      .quote {
+        font-size: 16px;
+      }
+
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-    <!-- CABECERA -->
-    <header>
-        <span>Ejercicio de Fuerza</span> |
-        <span>Cardio</span> |
-        <span>Abdomen</span> |
-        <span>Movilidad</span>
-    </header>
+<!-- NAV PREMIUM -->
+<header class="nav">
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Silvia Body System</h1>
-            <h2>Silvia Martinez Fernandez</h2>
-            <p class="frase">“Transforma tu cuerpo. Transforma tu vida.”</p>
-            <a href="#contacto" class="btn">Empieza tu transformación</a>
-        </div>
-    </section>
+  <div>
+    <strong>Silvia Body System</strong>
+  </div>
+
+  <div>
+    <a href="beneficios.html">Beneficios</a>
+    <a href="hipertrofia.html">Hipertrofia</a>
+    <a href="hibrido.html">Híbrido</a>
+    <a href="movilidad.html">Movilidad</a>
+    <a href="cardio-abdomen.html">Cardio</a>
+  </div>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="brand">Silvia Body System</div>
+
+    <div class="name">Silvia Martínez Fernández</div>
+
+    <div class="quote">
+      “Transforma tu cuerpo. Transforma tu vida.”
+    </div>
+
+    <a class="btn" href="beneficios.html">
+      Empieza tu transformación
+    </a>
+
+  </div>
+
+</section>
 
 </body>
 </html>
+
