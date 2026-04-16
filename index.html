@@ -1,340 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Entrenamiento Personal Pro</title>
-
-<style>
-/* =====================
-   RESET
-===================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
-body {
-  background: #0d0d0d;
-  color: #fff;
-  overflow-x: hidden;
-}
-
-/* =====================
-   GENERAL
-===================== */
-section {
-  padding: 80px 10%;
-}
-
-h1, h2, h3 {
-  margin-bottom: 20px;
-}
-
-p {
-  line-height: 1.6;
-  color: #cfcfcf;
-}
-
-.btn {
-  display: inline-block;
-  padding: 15px 25px;
-  background: linear-gradient(45deg, #ff0000, #ff7b00);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255,0,0,0.6);
-}
-
-/* =====================
-   HERO
-===================== */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background: radial-gradient(circle at top, #1a1a1a, #000);
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  color: #fff;
-}
-
-.hero span {
-  color: #ff3c00;
-}
-
-.hero p {
-  max-width: 600px;
-  margin-bottom: 30px;
-}
-
-/* =====================
-   ABOUT
-===================== */
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.about img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(255, 60, 0, 0.3);
-}
-
-/* =====================
-   SERVICES
-===================== */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #1a1a1a;
-  padding: 25px;
-  border-radius: 15px;
-  transition: 0.3s;
-  border: 1px solid #2a2a2a;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  border-color: #ff3c00;
-}
-
-/* =====================
-   TRANSFORMATIONS
-===================== */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.box {
-  background: #111;
-  height: 200px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #777;
-  border: 1px dashed #333;
-}
-
-/* =====================
-   TESTIMONIOS
-===================== */
-.testimonials {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.testimonial {
-  background: #1a1a1a;
-  padding: 20px;
-  border-radius: 15px;
-  border-left: 4px solid #ff3c00;
-}
-
-/* =====================
-   CONTACT
-===================== */
-form {
-  display: grid;
-  gap: 15px;
-  max-width: 500px;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-}
-
-textarea {
-  resize: none;
-  height: 120px;
-}
-
-/* =====================
-   ANIMATIONS
-===================== */
-.hidden {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s ease;
-}
-
-.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .about {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Silvia Body System</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero hidden">
-  <h1>Transforma tu cuerpo con <span>entrenamiento real</span></h1>
-  <p>Entrenamiento personalizado, disciplina y resultados reales. Conviértete en tu mejor versión con un plan diseñado solo para ti.</p>
-  <a class="btn" href="#contacto">Empieza tu transformación</a>
+<header class="nav">
+  <h1>Silvia Body System</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="beneficios.html">Beneficios</a>
+    <a href="hipertrofia.html">Hipertrofia</a>
+    <a href="hibrido.html">Híbrido</a>
+    <a href="movilidad.html">Movilidad</a>
+    <a href="cardio-abdomen.html">Cardio + Abs</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Transforma tu cuerpo. Mejora tu vida.</h2>
+  <p>Silvia Body System es un sistema de entrenamiento diseñado para todos los niveles: fuerza, salud, rendimiento y estética.</p>
+  <a class="btn" href="beneficios.html">Empezar</a>
 </section>
 
-<!-- ABOUT -->
-<section class="about hidden">
-  <div>
-    <h2>Sobre el entrenador</h2>
-    <p>Entrenador personal certificado con más de 8 años de experiencia ayudando a personas a transformar su físico y su mentalidad.</p>
-    <p>Especializado en pérdida de grasa, ganancia muscular y hábitos sostenibles.</p>
+<section class="grid">
+  <div class="card">
+    <h3>Fuerza</h3>
+    <p>Desarrollo muscular inteligente</p>
   </div>
-  <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e" alt="trainer"/>
-</section>
 
-<!-- SERVICES -->
-<section class="hidden">
-  <h2>Servicios</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Entrenamiento Personal</h3>
-      <p>Planes adaptados a tu nivel y objetivo.</p>
-    </div>
-    <div class="card">
-      <h3>Asesoría Nutricional</h3>
-      <p>Guía alimenticia para maximizar resultados.</p>
-    </div>
-    <div class="card">
-      <h3>Seguimiento Online</h3>
-      <p>Control semanal de progreso y ajustes.</p>
-    </div>
+  <div class="card">
+    <h3>Salud</h3>
+    <p>Entrena sin lesionarte</p>
   </div>
-</section>
 
-<!-- TRANSFORMATIONS -->
-<section class="hidden">
-  <h2>Transformaciones</h2>
-  <div class="gallery">
-    <div class="box">Antes / Después</div>
-    <div class="box">Antes / Después</div>
-    <div class="box">Antes / Después</div>
+  <div class="card">
+    <h3>Rendimiento</h3>
+    <p>Más energía en tu día a día</p>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="hidden">
-  <h2>Testimonios</h2>
-  <div class="testimonials">
-    <div class="testimonial">
-      "He cambiado mi físico y mi mentalidad completamente. Increíble guía."
-    </div>
-    <div class="testimonial">
-      "Resultados visibles en 8 semanas. 100% recomendado."
-    </div>
-    <div class="testimonial">
-      "El mejor entrenador que he tenido."
-    </div>
-  </div>
-</section>
+<footer>
+  <p>© 2026 Silvia Body System</p>
+</footer>
 
-<!-- CONTACT -->
-<section id="contacto" class="hidden">
-  <h2>Contacto</h2>
-  <form id="form">
-    <input type="text" id="name" placeholder="Nombre" required />
-    <input type="email" id="email" placeholder="Email" required />
-    <textarea id="message" placeholder="Mensaje" required></textarea>
-    <button class="btn" type="submit">Enviar</button>
-  </form>
-  <p id="formMsg"></p>
-</section>
-
-<script>
-// =====================
-// SCROLL ANIMATIONS
-// =====================
-const elements = document.querySelectorAll('.hidden');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-});
-
-elements.forEach(el => observer.observe(el));
-
-// =====================
-// FORM VALIDATION
-// =====================
-const form = document.getElementById("form");
-const msg = document.getElementById("formMsg");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
-
-  if (name.length < 2) {
-    msg.textContent = "Introduce un nombre válido.";
-    msg.style.color = "red";
-    return;
-  }
-
-  if (!email.includes("@")) {
-    msg.textContent = "Email inválido.";
-    msg.style.color = "red";
-    return;
-  }
-
-  if (message.length < 10) {
-    msg.textContent = "El mensaje es demasiado corto.";
-    msg.style.color = "red";
-    return;
-  }
-
-  msg.textContent = "Mensaje enviado correctamente 🚀";
-  msg.style.color = "lime";
-
-  form.reset();
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
