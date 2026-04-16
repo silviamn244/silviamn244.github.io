@@ -8,99 +8,165 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* HERO INTERNO MÁS VISUAL */
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: white;
+    }
+
+    /* ================= HERO ================= */
     .hero-beneficios {
-      height: 60vh;
+      height: 70vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       position: relative;
-      background: linear-gradient(135deg, #000, #1a1a1a);
+      overflow: hidden;
     }
 
     .hero-beneficios::before {
       content: "";
       position: absolute;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       background: url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1");
       background-size: cover;
       background-position: center;
-      opacity: 0.25;
+      filter: brightness(0.4);
+      transform: scale(1.1);
+    }
+
+    .hero-beneficios::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle, rgba(0,0,0,0.3), rgba(0,0,0,0.9));
     }
 
     .hero-beneficios .content {
       position: relative;
       z-index: 2;
-      max-width: 700px;
+      max-width: 800px;
+      padding: 20px;
+      animation: fadeUp 1s ease;
     }
 
     .hero-beneficios h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
+      font-size: 52px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
     .hero-beneficios p {
       font-size: 18px;
-      color: #dcdcdc;
+      color: #ffffff;
+      opacity: 0.85;
     }
 
-    /* TARJETAS MEJORADAS */
+    /* ================= GRID ================= */
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 80px 10%;
+      gap: 35px;
+      padding: 90px 10%;
     }
 
+    /* ================= CARDS PREMIUM ================= */
     .benefit-card {
-      background: linear-gradient(145deg, #111, #1a1a1a);
-      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
       padding: 30px;
-      transition: 0.4s;
-      border: 1px solid rgba(255,255,255,0.05);
+      transition: 0.4s ease;
       position: relative;
       overflow: hidden;
+      color: white; /* 🔥 TODO TEXTO BLANCO */
+    }
+
+    .benefit-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255,154,31,0.15), transparent 60%);
+      opacity: 0;
+      transition: 0.4s;
     }
 
     .benefit-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+      border: 1px solid rgba(255,154,31,0.3);
+    }
+
+    .benefit-card:hover::before {
+      opacity: 1;
     }
 
     .benefit-card h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: white;
     }
 
     .benefit-card ul {
-      margin: 15px 0;
-      padding-left: 15px;
+      padding-left: 18px;
     }
 
     .benefit-card li {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       font-size: 14px;
-      color: #cfcfcf;
+      color: white; /* 🔥 IMPORTANTE */
+      opacity: 0.85;
     }
 
     .emotion {
       margin-top: 15px;
       font-style: italic;
-      color: #ff9a1f;
       font-size: 14px;
+      color: #ffb347;
     }
 
-    /* CIERRE */
+    /* ================= CTA ================= */
     .cta-final {
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px;
+      background: linear-gradient(to top, #0a0a0a, #111);
     }
 
     .cta-final h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 34px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #ff9a1f;
+      color: black;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(255,154,31,0.4);
+    }
+
+    /* ================= ANIMATION ================= */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
   </style>
@@ -120,7 +186,7 @@
   </nav>
 </header>
 
-<!-- HERO DINÁMICO -->
+<!-- HERO -->
 <section class="hero-beneficios">
   <div class="content">
     <h2>Beneficios del Entrenamiento</h2>
@@ -139,7 +205,7 @@
       <li>Prevención de lesiones</li>
       <li>Mayor resistencia</li>
     </ul>
-    <p class="emotion">Tu cuerpo deja de ser un límite y se convierte en una herramienta.</p>
+    <p class="emotion">Tu cuerpo deja de ser un límite.</p>
   </div>
 
   <div class="benefit-card">
@@ -157,38 +223,38 @@
     <h3>🦴 Huesos y estructura</h3>
     <ul>
       <li>Refuerzo óseo</li>
-      <li>Prevención del deterioro</li>
       <li>Mejor estabilidad</li>
-      <li>Menos riesgo de lesiones</li>
+      <li>Prevención del desgaste</li>
+      <li>Salud a largo plazo</li>
     </ul>
-    <p class="emotion">Inviertes hoy en tu calidad de vida del futuro.</p>
+    <p class="emotion">Tu futuro empieza hoy.</p>
   </div>
 
   <div class="benefit-card">
     <h3>🧠 Core y movilidad</h3>
     <ul>
       <li>Abdomen fuerte</li>
-      <li>Mayor equilibrio</li>
-      <li>Movimientos más ágiles</li>
-      <li>Más independencia</li>
+      <li>Equilibrio mejorado</li>
+      <li>Movilidad diaria</li>
+      <li>Más autonomía</li>
     </ul>
-    <p class="emotion">Te mueves mejor. Vives mejor.</p>
+    <p class="emotion">Te mueves con libertad.</p>
   </div>
 
   <div class="benefit-card">
-    <h3>🥗 Bienestar y mente</h3>
+    <h3>🥗 Mente y bienestar</h3>
     <ul>
       <li>Mejor descanso</li>
       <li>Menos estrés</li>
-      <li>Más concentración</li>
-      <li>Relación sana con tu cuerpo</li>
+      <li>Más enfoque</li>
+      <li>Mejor estado mental</li>
     </ul>
-    <p class="emotion">No solo transformas tu cuerpo. Transformas tu mente.</p>
+    <p class="emotion">Tu mente también entrena.</p>
   </div>
 
 </section>
 
-<!-- CIERRE -->
+<!-- CTA -->
 <section class="cta-final">
   <h2>Entrenar no es solo cambiar tu cuerpo. Es cambiar tu vida.</h2>
 
